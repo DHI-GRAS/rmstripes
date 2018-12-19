@@ -1,9 +1,13 @@
 from setuptools import setup, find_packages
+import versioneer
 
 setup(
     name='rmstripes',
-    version=0.1,
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     packages=find_packages(),
+    author="Niklas Heim",
+    author_email="nihe@dhigroup.com",
     install_requires=[
         'click',
         'matplotlib',
